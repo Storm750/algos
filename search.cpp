@@ -12,8 +12,17 @@ using namespace std;
 \param [in] data The data set that will be searched
 \returns location of key if found or -1 if not found
 */
-int linearSearch(auto data, auto key);//prototype
-
+int linearSearch(auto data, auto key)//prototype
+{
+	for (int i=0; i < data.size(); i++)
+	{
+		if (data[i] == key)
+		{
+			return i; //found it.
+		}
+	}
+	return -1; //not found.
+}
 
 int main()
 {
@@ -23,7 +32,7 @@ int main()
 
    cout<<"Welcome to \"search it\". We first need some input data."<<endl;
    cout<<"We'll assume the inputs do not have any spaces."<<endl<<endl;
-   cout<<"To end input type the #-character (followed by Enter)"<<endl<<endl;
+   cout<<"To end input, type the # character (followed by Enter)"<<endl<<endl;
 
    cin>>input;
  
